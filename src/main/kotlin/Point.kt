@@ -1,61 +1,50 @@
-class Point{
-    private var x: Float = 0.0f
-    private var y: Float = 0.0f
+class Point(a : Double, b : Double){
+    private var x: Double = a
+    private var y: Double = b
 
     //region Get X/Y()
-    fun GetX() : Float{
-        return x
-    }
-    fun GetY() : Float{
-        return y
-    }
+    var X : Double
+        get() { return x}
+        set(value) { x = value}
+
+    var Y : Double
+        get() { return y}
+        set(value) { y = value}
     //endregion
 
-    //region SetPoints()
-    fun SetPoints(_x: Int, _y: Int){
-        x = _x.toFloat()
-        y = _y.toFloat()
-    }
-    fun SetPoints(_x: Float, _y: Float){
-        x = _x
-        y = _y
-    }
-    fun SetPoints(_x: Double, _y: Double){
-        x = _x.toFloat()
-        y = _y.toFloat()
-    }
-    //endregion
+
 
     //region AddPoints()
     fun AddPoints(_x: Int, _y: Int){
-        x = _x.toFloat()
-        y = _y.toFloat()
+        x = _x.toDouble()
+        y = _y.toDouble()
     }
     fun AddPoints(_x: Float, _y: Float){
-        x = _x
-        y = _y
+        x = _x.toDouble()
+        y = _y.toDouble()
     }
     fun AddPoints(_x: Double, _y: Double){
-        x = _x.toFloat()
-        y = _y.toFloat()
+        x = _x
+        y = _y
     }
     //endregion
 
     //region Equals()
-    fun Equals(other : Point ) : Boolean{
-        if(other.GetX() == this.x && other.GetY() == this.y)
-            return true
-        else
-            return false
+    override fun equals(other : Any? ) : Boolean{
+        if(other is Point)
+            if(other.X == this.x && other.Y == this.y) return true
+
+        return false
     }
-    fun Equals(_x : Float , _y: Float) : Boolean{
+    fun equals(_x : Double , _y: Double) : Boolean{
         if(_x == this.x && _y == this.y) return true
-        else return false
+
+        return false
     }
     //endregion
 
     //region WriteLine()
-    fun ToString() : String{
+    override fun toString() : String{
         return  this.x.toString() + " : " + this.y.toString()
     }
 
