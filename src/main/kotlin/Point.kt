@@ -48,18 +48,16 @@ class Point{
         else
             return false
     }
-    fun EqualTo(_x : Float , _y: Float) : Boolean{
+    fun Equals(_x : Float , _y: Float) : Boolean{
         if(_x == this.x && _y == this.y) return true
         else return false
     }
     //endregion
 
     //region WriteLine()
-    fun WriteLine(){
-        println(" " + this.x.toString() + " : " + this.y.toString() )
+    fun ToString() : String{
+        return  this.x.toString() + " : " + this.y.toString()
     }
-    fun WriteLine(_message : String){
-        println(_message + " " + this.x.toString() + " : " + this.y.toString())
-    }
+
     //endregion
 }

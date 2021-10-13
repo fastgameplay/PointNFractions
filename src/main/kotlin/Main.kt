@@ -5,14 +5,17 @@ fun main() {
     // Point.Equals( can handle point and float types)
     // Point.WriteLine("Message") Prints point X , Y after message
 
-    var pointer = Point()
-    pointer.SetPoints(0,2)
+    var pointer1 = Point()
+    pointer1.SetPoints(0,2)
     var pointer2 = Point()
-    pointer2.SetPoints(0.1f,2f)
+    pointer2.SetPoints(0.0f,2f)
 
-    pointer.WriteLine("First Pointer :" )
-    pointer2.WriteLine()
-    println( pointer.Equals(pointer2) )
+    if(pointer1.Equals(pointer2))
+        println(pointer1.ToString() + " = " + pointer2.ToString())
+    else println(pointer1.ToString() + " != " + pointer2.ToString())
+
+
+
 
 
 }
