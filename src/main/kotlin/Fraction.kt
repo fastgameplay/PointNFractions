@@ -14,7 +14,6 @@ class Fraction(upper : Int, lower : Int) {
         set(value : Int) {if (value != 0) denominator = value}
     //endregion
 
-
     public fun Simplify() {
 
         var n = numerator
@@ -49,50 +48,16 @@ class Fraction(upper : Int, lower : Int) {
         }
     }
 
-//    private fun Usg (_numerator : Int, _denominator: Int) : Int{
-//        if(_denominator == 0)
-//            return _numerator
-//        return Usg(_denominator, _denominator % _numerator)
-//    }
-
-//    fun Simplify(){
-//        var i : Int
-//        i = Usg(numerator,denominator)
-//
-//        numerator = numerator / i
-//        denominator = denominator /i
-//    }
-
     override fun toString() : String{
         return (numerator.toString() + "/" + denominator.toString())
     }
 
-
-
     //region Operators
     //mushaobs amitom arvkidebt xeluniebs
         operator fun plus (other: Fraction) = Fraction(numerator * other.Denominator + other.Numerator * denominator,denominator * other.Denominator)
-    //    {
-    //        this.Simplify()
-    //        other.Simplify()
-    //        var bottom : Int =denominator * other.Denominator
-    //        numerator = numerator * other.Denominator + other.Numerator * denominator
-    //        denominator = bottom
-    //        Simplify()
-    //    }
-
         operator fun minus (other: Fraction) = Fraction(numerator * other.Denominator - other.Numerator * denominator,denominator * other.Denominator)
-    //    {
-    //        this.Simplify()
-    //        other.Simplify()
-    //        var bottom : Int =denominator * other.Denominator
-    //        numerator = numerator * other.Denominator - other.Numerator * denominator
-    //        denominator = bottom
-    //        Simplify()
-    //    }
         operator fun times (other: Fraction) = Fraction( numerator * other.Numerator,denominator * other.Denominator)
         operator fun div (other: Fraction) = Fraction( numerator * other.Denominator,denominator * other.Numerator)
 
     //endregion
-
 }

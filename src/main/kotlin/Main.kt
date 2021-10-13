@@ -1,9 +1,6 @@
 
 fun main() {
-    println("Hello World!")
-    // In Point() to get axis (GetX(), GetY())
-    // Point.Equals( can handle point and float types)
-    // Point.WriteLine("Message") Prints point X , Y after message
+
 
     var pointer1 = Point(0.2,5.1)
     var pointer2 = Point(0.1,5.2)
@@ -17,9 +14,8 @@ fun main() {
     var fractions1 = Fraction(9,11)
 
     var fractions2 = Fraction(21,4)
+
     
-
-
     println((fractions1.toString()))
     println((fractions2.toString()))
 
