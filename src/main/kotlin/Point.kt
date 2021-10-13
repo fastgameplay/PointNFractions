@@ -41,8 +41,8 @@ class Point{
     }
     //endregion
 
-    //region IsEqual()
-    fun EqualTo(other : Point ) : Boolean{
+    //region Equals()
+    fun Equals(other : Point ) : Boolean{
         if(other.GetX() == this.x && other.GetY() == this.y)
             return true
         else
@@ -51,6 +51,15 @@ class Point{
     fun EqualTo(_x : Float , _y: Float) : Boolean{
         if(_x == this.x && _y == this.y) return true
         else return false
+    }
+    //endregion
+
+    //region WriteLine()
+    fun WriteLine(){
+        println(" " + this.x.toString() + " : " + this.y.toString() )
+    }
+    fun WriteLine(_message : String){
+        println(_message + " " + this.x.toString() + " : " + this.y.toString())
     }
     //endregion
 }
