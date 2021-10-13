@@ -15,6 +15,9 @@ fun main() {
     else println(pointer1.ToString() + " != " + pointer2.ToString())
 
 
+    var fractions = Fraction()
+    fractions.numerator = 1;
+    fractions.denominator = 5;
 
 
 
